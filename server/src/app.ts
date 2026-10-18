@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express, { type ErrorRequestHandler } from 'express'
 import type { Db } from './db.js'
+import { dashboardRouter } from './routes/dashboard.js'
 import { healthRouter } from './routes/health.js'
 
 export function createApp(db: Db) {
@@ -9,6 +10,7 @@ export function createApp(db: Db) {
   app.use(express.json())
 
   app.use('/api', healthRouter(db))
+  app.use('/api', dashboardRouter(db))
 
   app.use((_req, res) => {
     res.status(404).json({ error: 'Not found' })

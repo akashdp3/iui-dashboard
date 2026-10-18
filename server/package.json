@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && cp src/schema.sql dist/",
     "start": "node dist/index.js",
     "lint": "tsc --noEmit -p tsconfig.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "db:init": "tsx src/scripts/init-db.ts",
+    "db:seed": "tsx src/scripts/seed.ts"
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",

@@ -11,7 +11,9 @@
     "build": "npm run build --workspaces",
     "test": "npm test --workspaces",
     "lint": "npm run lint --workspaces",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "db:init": "npm run db:init -w server",
+    "db:seed": "npm run db:seed -w server"
   },
   "devDependencies": {
     "concurrently": "^9.0.0",
