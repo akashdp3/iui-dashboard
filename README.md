@@ -2,7 +2,7 @@
 
 Dashboard for an intelligent user interface project. npm-workspaces monorepo:
 
-- `client/` – React + Vite + TypeScript + Tailwind (Vitest + Testing Library)
+- `client/` – React + Vite + TypeScript + Tailwind + shadcn/ui (Vitest + Testing Library). `App.tsx` is the shadcn `dashboard-01` layout, using static sample data from `src/app/dashboard/data.json` and the theme tokens in `src/index.css`. Add more components with `npx shadcn@latest add <name>` from `client/`.
 - `server/` – Express + TypeScript + SQLite (better-sqlite3, Vitest + supertest)
 
 ## Setup
